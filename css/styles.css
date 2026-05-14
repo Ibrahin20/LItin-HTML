@@ -1,0 +1,636 @@
+
+:root {
+    --primary-color: #1a365d; /* Azul oscuro corporativo LITIN */
+    --accent-color: #e62222;  /* Naranja/Dorado para resaltar botones */
+    --text-color: #2d3748;    /* Gris oscuro para el texto (más fácil de leer que el negro puro) */
+    --light-bg: #2632da;      /* Fondo claro y limpio */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* --- HEADER & NAVBAR --- */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    list-style: none;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Se muestra al pasar el mouse */
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+/* Botón Aula Virtual */
+.btn-aula-virtual {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-aula-virtual:hover {
+    background-color: #002244;
+    transform: translateY(-2px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 70px; /* Compensa el navbar fijo */
+}
+
+.hero-content {
+    max-width: 800px;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: var(--accent-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #e68a00;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.section-padding {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.container-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* --- NUESTRA INSTITUCIÓN --- */
+.institucion-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.institucion-text h2 span {
+    color: var(--accent-color);
+}
+
+.institucion-text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.valores-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.valores-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.institucion-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.institucion-image img:hover {
+    transform: scale(1.02);
+}
+
+/* --- RESPONSIVE DESIGN  --- */
+@media (max-width: 768px) {
+    .container-grid {
+        grid-template-columns: 1fr; /* Pone el texto arriba y la imagen abajo */
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-menu {
+        display: none; /* Ocultamos el menú por ahora para la versión móvil */
+    }
+}
+
+/* --- PAGINA INSTITUCION --- */
+
+/* Banner Superior */
+.page-banner {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                url('../assets/img/fondo-institucion.jpg') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    color: #a0aec0; /* Azul claro / grisáceo */
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+
+/* Misión y Visión */
+.card-info {
+    text-align: center;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.icon-main {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* Filosofía y Valores */
+.filosofia {
+    background-color: var(--primary-color);
+    padding: 100px 20px;
+    color: var(--white);
+}
+
+.filosofia-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.filosofia-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valor-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.valor-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* Infraestructura */
+.infra-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.infra-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.infra-list i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.infra-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.img-infra {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .infra-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el Logo Largo */
+.logo {
+    display: flex;
+    flex-direction: column; /* Apila el texto en dos líneas */
+    line-height: 1.1; /* Reduce el espacio entre líneas */
+    text-decoration: none;
+}
+
+.logo-top {
+    font-size: 1.1rem; /* Más pequeño arriba */
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: none;
+}
+
+.logo-bottom {
+    font-size: 1.4rem; /* Más grande y llamativo abajo */
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.logo-bottom span {
+    color: var(--accent-color); /* El punto final naranja/rojo */
+}
+
+/* Ajuste del contenedor para dar espacio al nombre largo */
+.nav-container {
+    max-width: 1400px; /* Ampliamos un poco el contenedor para que quepa todo */
+    padding: 0.5rem 2rem;
+}
+
+/* Evitar que el menú se pegue demasiado al logo */
+.navbar {
+    margin-left: 20px;
+}
+
+/* Responsive: reducir tamaño en tablets */
+@media (max-width: 1024px) {
+    .logo-top { font-size: 0.9rem; }
+    .logo-bottom { font-size: 1.1rem; }
+}
+
+/* --- OFERTA ACADÉMICA --- */
+
+/* Común */
+.oferta-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+
+.title-highlight {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.title-highlight span {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.subtitle-gray { color: #718096; max-width: 600px; margin: 15px auto; }
+
+/* Sección Primaria (Blanco con degradado) */
+.oferta-primaria {
+    background: linear-gradient(180deg, #ebf8ff 0%, #ffffff 100%);
+    padding-bottom: 80px;
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.programa-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+.icon-box.red { background: #fff5f5; color: #e53e3e; }
+.icon-box.blue { background: #ebf8ff; color: #3182ce; }
+.icon-box.cyan { background: #e6fffa; color: #38b2ac; }
+
+/* Sección Media General (Slate Oscuro) */
+.oferta-media {
+    background-color: #2d3748; /* Color Slate */
+    color: var(--white);
+    padding: 100px 20px;
+}
+
+.subtitle-light { color: #a0aec0; max-width: 600px; margin: 15px auto; }
+
+.media-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.stat-item { text-align: center; }
+.stat-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.industrial-item {
+    margin-top: 30px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.industrial-item h4 { font-size: 1.3rem; margin-bottom: 10px; color: var(--accent-color); }
+
+.img-styled {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 5px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Contenedor de imágenes ajustado */
+.formacion-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Las alinea a la derecha para dar aire al texto */
+    gap: 20px;
+}
+
+.img-mini {
+    width: 80%; /* Reducimos del 100% al 80% para que sean menos imponentes */
+    max-width: 450px; /* Evita que crezcan demasiado en pantallas grandes */
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.05); /* Borde más sutil */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* Efecto al pasar el mouse (Sutileza Senior) */
+.img-mini:hover {
+    transform: scale(1.03) translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+/* Ajuste de la cuadrícula para que el texto tenga más protagonismo */
+@media (min-width: 769px) {
+    .formacion-industrial .container-grid {
+        grid-template-columns: 1.2fr 0.8fr; /* El texto ocupa el 60% y las fotos el 40% */
+        gap: 80px; /* Más separación entre columnas */
+    }
+}
+
+/* --- DEPARTAMENTOS --- */
+.dept-hero {
+    background: var(--primary-color);
+    padding: 120px 20px 60px;
+    text-align: center;
+    color: var(--white);
+}
+
+.dept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -50px; /* Hace que las primeras tarjetas "entren" un poco en el hero */
+}
+
+.dept-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+}
+
+.dept-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.dept-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.dept-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.dept-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.dept-grid {
+    display: flex; /* Cambiamos de grid a flex para mayor control de alineación */
+    flex-wrap: wrap;
+    justify-content: center; /* Esto centra las tarjetas de la última fila */
+    gap: 30px;
+    margin-top: -50px;
+}
+
+.dept-card {
+    flex: 1 1 300px; /* Permite que crezcan un poco pero tengan un mínimo de 300px */
+    max-width: 350px; /* Evita que se estiren demasiado */
+}
+
+.cta-card {
+    border: 2px dashed var(--accent-color);
+    background-color: #fffaf0; /* Un tono muy levemente naranja */
+}
