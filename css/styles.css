@@ -1,10 +1,13 @@
-
+/* ==========================================================================
+   1. VARIABLES Y RESET
+   ========================================================================== */
 :root {
-    --primary-color: #1a365d; /* Azul oscuro corporativo LITIN */
-    --accent-color: #e62222;  /* Naranja/Dorado para resaltar botones */
-    --text-color: #2d3748;    /* Gris oscuro para el texto (más fácil de leer que el negro puro) */
-    --light-bg: #2632da;      /* Fondo claro y limpio */
+    --primary-color: #1a365d; /* Azul LITIN */
+    --accent-color: #e62222;  /* Rojo/Naranja Institucional */
+    --text-color: #2d3748;    /* Gris para lectura */
+    --light-bg: #f7fafc;      /* Fondo secciones claras */
     --white: #ffffff;
+    --nav-height: 90px;
 }
 
 * {
@@ -16,58 +19,89 @@
 
 body {
     color: var(--text-color);
-    background-color: var(--light-bg);
+    background-color: var(--white);
+    padding-top: var(--nav-height); /* Evita que el contenido se meta bajo el menú */
 }
 
-/* --- HEADER & NAVBAR --- */
-.header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
+/* ==========================================================================
+   2. NAVBAR (UNIFICADA)
+   ========================================================================== */
+.navbar {
+    background: var(--white);
+    height: var(--nav-height);
     width: 100%;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    z-index: 9999;
 }
 
 .nav-container {
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
 }
 
-.logo {
-    font-size: 1.8rem;
+/* Identidad Visual en Nav (Brand) */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.brand-img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.brand-sub {
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--primary-color);
-    text-decoration: none;
 }
 
-.logo span {
+/* Menú de Navegación */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
     color: var(--accent-color);
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--primary-color);
-}
-
-/* Dropdown */
+/* Dropdown de Departamentos */
 .dropdown {
     position: relative;
 }
@@ -80,90 +114,134 @@ body {
     background-color: var(--white);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     list-style: none;
-    min-width: 200px;
-    border-radius: 5px;
-    overflow: hidden;
+    min-width: 220px;
+    border-radius: 8px;
+    padding: 10px 0;
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block; /* Se muestra al pasar el mouse */
+    display: block;
 }
 
 .dropdown-menu li a {
-    display: block;
     padding: 10px 20px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: background 0.3s;
+    display: block;
 }
 
 .dropdown-menu li a:hover {
     background-color: var(--light-bg);
-    color: var(--primary-color);
 }
 
-/* Botón Aula Virtual */
-.btn-aula-virtual {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 10px 24px;
+/* Botón Aula Virtual en Nav */
+.btn-aula {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    padding: 10px 22px !important;
     border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s;
+    transition: all 0.3s ease !important;
 }
 
-.btn-aula-virtual:hover {
-    background-color: #002244;
+.btn-aula:hover {
+    background: #2c5282 !important;
     transform: translateY(-2px);
 }
 
-/* --- HERO SECTION --- */
+/* ==========================================================================
+   3. HERO SECTION (LAYOUT 50/50 CON VIDEO)
+   ========================================================================== */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
-                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    position: relative;
+    height: calc(100vh - var(--nav-height));
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 58, 138, 0.65); /* Azul translúcido */
+    z-index: -1;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    z-index: 10;
+    gap: 40px;
+}
+
+/* Lado del Escudo */
+.hero-image-side {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    margin-top: 70px; /* Compensa el navbar fijo */
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-main-logo {
+    width: 100%;
+    max-width: 480px;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+}
+
+/* Lado del Contenido */
+.hero-text-side {
+    flex: 1;
     color: var(--white);
+    text-align: left;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
+.hero-text-side h1 {
+    font-size: 3.8rem;
+    line-height: 1.1;
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
-.hero-content h1 span {
+.hero-text-side h1 span {
     color: var(--accent-color);
 }
 
-.hero-content p {
+.hero-text-side p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
-    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.9;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 15px;
 }
 
+/* ==========================================================================
+   4. COMPONENTES GLOBALES (BOTONES Y CARDS)
+   ========================================================================== */
 .btn-primary, .btn-secondary {
-    padding: 12px 30px;
-    border-radius: 5px;
+    padding: 14px 32px;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
@@ -173,25 +251,25 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #e68a00;
+    background-color: #c53030;
     transform: translateY(-3px);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--white);
     border: 2px solid var(--white);
+    color: var(--white);
 }
 
 .btn-secondary:hover {
     background-color: var(--white);
     color: var(--primary-color);
-    transform: translateY(-3px);
 }
 
+/* ==========================================================================
+   5. SECCIONES DE CONTENIDO (INSTITUCION / OFERTA)
+   ========================================================================== */
 .section-padding {
-    padding: 80px 20px;
-    background-color: var(--white);
+    padding: 100px 20px;
 }
 
 .container-grid {
@@ -199,8 +277,84 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
+}
+
+.img-styled {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   6. DEPARTAMENTOS (LAYOUT CENTRADO)
+   ========================================================================== */
+.dept-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -60px;
+}
+
+.dept-card {
+    flex: 0 1 350px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.dept-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.dept-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cta-card {
+    border: 2px dashed var(--accent-color);
+    background-color: #fffaf0;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text-side {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-text-side h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Idealmente aquí implementarías un menú hamburguesa */
+    }
+
+    .container-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- NUESTRA INSTITUCIÓN --- */
@@ -247,17 +401,8 @@ body {
 
 /* --- RESPONSIVE DESIGN  --- */
 @media (max-width: 768px) {
-    .container-grid {
-        grid-template-columns: 1fr; /* Pone el texto arriba y la imagen abajo */
-        text-align: center;
-    }
-    
     .hero-content h1 {
         font-size: 2.5rem;
-    }
-    
-    .nav-menu {
-        display: none; /* Ocultamos el menú por ahora para la versión móvil */
     }
 }
 
