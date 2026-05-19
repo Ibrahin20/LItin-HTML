@@ -45,5 +45,6 @@ function inicializarEventosNavbar() {
     });
 }
 
+
 // 3. Ejecutar la carga al iniciar
 document.addEventListener('DOMContentLoaded', cargarNavbar);

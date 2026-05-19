@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes y Recreación | LITIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="page-banner deportes-banner-bg">
+        <div class="banner-content">
+            <h1>DEPORTES Y RECREACIÓN</h1>
+            <p>Fomentando la salud, la disciplina y el espíritu competitivo en nuestra comunidad litiniana.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container-grid">
+            
+            <div class="institucion-text">
+                <h2 class="title-highlight">
+                    <span>MENTE SANA</span> EN CUERPO SANO
+                </h2>
+                <p class="subtitle-gray" style="margin-top: 20px; font-size: 1.1rem; line-height: 1.8;">
+                    En la U.E. LITIN entendemos el deporte como un pilar fundamental para el desarrollo integral. Nuestras actividades recreativas y selecciones deportivas buscan potenciar habilidades físicas, el liderazgo y el sano compañerismo.
+                </p>
+                
+                <ul class="valores-list" style="margin-top: 30px;">
+                    <li><i class="fas fa-star" style="color: var(--accent-color); margin-right: 10px;"></i> Alta competencia y ligas intercolegiales</li>
+                    <li><i class="fas fa-heartbeat" style="color: var(--accent-color); margin-right: 10px;"></i> Promoción de la salud y hábitos de vida activos</li>
+                </ul>
+            </div>
+
+            <div class="institucion-image">
+                <img src="assets/img/cultura-actividad.jpg" alt="Estudiantes en actividades deportivas" class="img-styled">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--light-bg);">
+        <div class="testimonios-header">
+            <span class="top-subtitle">NUESTRAS DISCIPLINAS</span>
+            <h3 class="main-title" style="margin-top: 10px;">TALLERES Y SELECCIONES</h3>
+            <div class="title-line" style="background: var(--accent-color);"></div>
+        </div>
+
+        <div class="dept-grid" style="margin-top: 50px;">
+            
+            <div class="dept-card border-blue">
+                <div class="dept-icon" style="color: var(--primary-color);"><i class="fas fa-basketball-ball"></i></div>
+                <h3>Baloncesto</h3>
+                <p>Desarrollo de táctica, agilidad y trabajo en equipo a través de entrenamientos sistemáticos y torneos internos.</p>
+            </div>
+
+            <div class="dept-card border-red">
+                <div class="dept-icon" style="color: var(--accent-color);"><i class="fas fa-volleyball-ball"></i></div>
+                <h3>Voleibol</h3>
+                <p>Potenciación de reflejos, coordinación y estrategia colectiva tanto en categorías masculinas como femeninas.</p>
+            </div>
+
+            <div class="dept-card border-blue">
+                <div class="dept-icon" style="color: var(--primary-color);"><i class="fas fa-running"></i></div>
+                <h3>Fútbol Sala</h3>
+                <p>Disciplina, velocidad y destreza técnica en una de las disciplinas más apasionantes y concurridas del plantel.</p>
+            </div>
+
+            <div class="dept-card border-red">
+                <div class="dept-icon" style="color: var(--accent-color);"><i class="fas fa-chess"></i></div>
+                <h3>Ajedrez y Recreación</h3>
+                <p>Espacios alternativos para el desarrollo del pensamiento crítico, análisis estratégico y recreación mental pasiva.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function cargarNavbar() {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('No se pudo cargar el navbar');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        document.addEventListener('DOMContentLoaded', cargarNavbar);
+    </script>
+</body>
+</html>
