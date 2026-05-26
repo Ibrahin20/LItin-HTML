@@ -1,65 +1,474 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Educativo LITIN</title>
+    <title>Instituto Educativo LITIN | Disciplina y Éxito</title>
+    <meta name="description"
+        content="Unidad Educativa Liceo de Tecnología Industrial LITIN. Formando líderes técnicos con sólidos valores e innovación tecnológica en Carabobo por más de 32 años.">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Importando una fuente moderna de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Iconos modernos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-   <div id="navbar-placeholder"></div>
+    <!-- Contenedor del Navbar (se carga dinámicamente con JS) -->
+    <div id="navbar-placeholder"></div>
 
-    <!-- HERO SECTION -->
+    <!-- 1. HERO SECTION -->
     <section class="hero">
-    <div class="video-container">
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="assets/video/video-litin.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="overlay"></div>
-
-    <div class="container hero-wrapper">
-        
-        <div class="hero-image-side">
-            <img src="assets/img/logo-litin-sinfondo.png" alt="Escudo 32 Años LITIN" class="hero-main-logo">
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="video-bg">
+                <source src="assets/video/video-litin.mp4" type="video/mp4">
+            </video>
         </div>
+        <div class="overlay"></div>
 
-        <div class="hero-text-side">
-            <h1>Educación de <br>Excluencia <br><span>Para el Mañana</span></h1>
-            <p>32 años formando líderes con valores e innovación tecnológica.</p>
-            
-            <div class="hero-buttons">
-                <a href="admision.html" class="btn-primary">Proceso de Admisión</a>
-                <a href="oferta-academica.html" class="btn-secondary">Oferta Académica</a>
+        <div class="container hero-wrapper">
+            <div class="hero-image-side reveal fade-left">
+                <img src="assets/img/logo-litin-sinfondo.png" alt="Escudo 32 Años LITIN" class="hero-main-logo">
+            </div>
+
+            <div class="hero-text-side reveal fade-right">
+                <span class="hero-badge">32 Años de Trayectoria</span>
+                <h1>Educación de <br>Excelencia <br><span>Para el Mañana</span></h1>
+                <p>Formamos líderes íntegros en valores con un alto enfoque tecnológico, científico e industrial, listos
+                    para la educación superior y el campo profesional.</p>
+
+                <div class="hero-buttons">
+                    <a href="admision.html" class="btn-primary"><i class="fas fa-user-plus"></i> Proceso de Admisión</a>
+                    <a href="#institucion" class="btn-secondary"><i class="fas fa-info-circle"></i> Conócenos</a>
+                </div>
             </div>
         </div>
 
-    </div>
-</section>
+        <!-- Indicador de Scroll -->
+        <a href="#institucion" class="scroll-indicator" aria-label="Desplazar hacia abajo">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
 
-    <section id="institucion" class="section-padding">
-        <div class="container-grid">
+    <!-- 2. SECCIÓN SOBRE NOSOTROS (INSTITUCIÓN) -->
+    <section id="institucion" class="section-padding reveal fade-bottom">
+        <div class="container container-grid">
             <div class="institucion-text">
-                <h2>Más de 30 años de Experiencia <br><span>Formando Triunfadores</span></h2>
-                <p>Somos una Unidad Educativa comprometida con la excelencia académica, con el firme propósito de formar ciudadanos integrales, proactivos y capacitados en el área tecnológica e industrial, preparados para contribuir a la construcción de un mejor país.</p>
-                
-                <ul class="valores-list">
-                    <li>✔️ Excelencia Académica</li>
-                    <li>✔️ Formación en Valores</li>
-                    <li>✔️ Innovación Tecnológica</li>
-                </ul>
-                <a href="oferta-academica.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">Ver Oferta Académica</a>
+                <span class="section-pre">Nuestra Institución</span>
+                <h2>Más de 30 Años de Experiencia <br><span>Formando Triunfadores</span></h2>
+                <p>Somos una Unidad Educativa comprometida con el desarrollo integral del estudiante, implementando
+                    métodos pedagógicos de vanguardia bajo el lema institucional de <strong>"Disciplina y
+                        Éxito"</strong>.</p>
+
+                <div class="valores-home-list">
+                    <div class="valor-home-item">
+                        <div class="valor-home-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4>Excelencia Académica</h4>
+                            <p>Plan de estudios riguroso adaptado a las demandas globales.</p>
+                        </div>
+                    </div>
+                    <div class="valor-home-item">
+                        <div class="valor-home-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4>Formación en Valores</h4>
+                            <p>Ética, honestidad, responsabilidad y sentido cívico.</p>
+                        </div>
+                    </div>
+                    <div class="valor-home-item">
+                        <div class="valor-home-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4>Innovación Tecnológica</h4>
+                            <p>Plataforma PLED y laboratorios técnicos especializados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="institucion.html" class="btn-primary" style="margin-top: 30px; display: inline-block;"><i
+                        class="fas fa-university"></i> Nuestra Filosofía</a>
             </div>
-            
+
             <div class="institucion-image">
-                <img src="assets/img/estudiantes-primaria.jpg" alt="Estudiantes de Primaria en el Instituto">
+                <div class="img-styled-wrapper">
+                    <img src="assets/img/foto-institucion.png" alt="Fachada del Instituto LITIN" class="img-styled">
+                    <div class="experience-badge">
+                        <h3>32+</h3>
+                        <p>Años Educando</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 3. SECCIÓN: NUESTROS PILARES -->
+    <section class="pilares section-padding reveal fade-bottom">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-pre">Pilares Institucionales</span>
+                <h2 class="section-title">El Camino al <span>Éxito Educativo</span></h2>
+                <p class="section-subtitle">Garantizamos una formación robusta equilibrando tecnología, carácter y
+                    preparación física.</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="pilares-grid">
+                <!-- Pilar 1 -->
+                <div class="pilar-card">
+                    <div class="pilar-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Tecnología Educativa</h3>
+                    <p>Acceso a nuestra Plataforma Litiniana para Educación a Distancia (PLED) y laboratorios modernos.
+                    </p>
+                </div>
+                <!-- Pilar 2 -->
+                <div class="pilar-card">
+                    <div class="pilar-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Valores Humanos</h3>
+                    <p>Inculcamos solidaridad, respeto mutuo, ecuanimidad y compromiso social.</p>
+                </div>
+                <!-- Pilar 3 -->
+                <div class="pilar-card">
+                    <div class="pilar-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Deporte y Cultura</h3>
+                    <p>Desarrollo psicomotriz y social a través de canchas múltiples y talleres de extensión cultural.
+                    </p>
+                </div>
+                <!-- Pilar 4 -->
+                <div class="pilar-card">
+                    <div class="pilar-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Orientación Industrial</h3>
+                    <p>Especialización técnica y talleres de bachillerato industrial que abren las puertas laborales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN: ESTADÍSTICAS (CIFRAS DE ÉXITO) -->
+    <section class="estadisticas section-padding dark-bg reveal fade-bottom">
+        <div class="container stats-container">
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-award"></i></div>
+                <h2 class="counter-num" data-target="32" data-suffix="+">0</h2>
+                <p>Años de Trayectoria</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                <h2 class="counter-num" data-target="5000" data-suffix="+">0</h2>
+                <p>Egresados Profesionales</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h2 class="counter-num" data-target="35" data-suffix="+">0</h2>
+                <p>Docentes Especializados</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-ruler-combined"></i></div>
+                <h2 class="counter-num" data-target="5000" data-suffix=" m²">0</h2>
+                <p>De Infraestructura</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN: OFERTA ACADÉMICA DESTACADA -->
+    <section id="oferta-destacada" class="section-padding reveal fade-bottom">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-pre">Estructura Curricular</span>
+                <h2 class="section-title">Nuestra Oferta <span>Académica</span></h2>
+                <p class="section-subtitle">Acompañamos a los estudiantes en sus fases cruciales de desarrollo con
+                    planes de estudio acreditados.</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="oferta-home-grid">
+                <!-- Primaria -->
+                <div class="oferta-home-card primary-theme">
+                    <div class="oferta-home-img">
+                        <img src="assets/img/estudiantes-primaria.jpg" alt="Educación Primaria LITIN">
+                        <div class="oferta-home-overlay">
+                            <span>Básica Integral</span>
+                        </div>
+                    </div>
+                    <div class="oferta-home-content">
+                        <h3>Educación Primaria</h3>
+                        <p>Construimos los cimientos del saber escolar con especial atención en pensamiento
+                            lógico-matemático, expresión oral, valores y disciplinas deportivas.</p>
+                        <a href="oferta-academica.html" class="btn-text">Ver Plan de Estudios <i
+                                class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Media General -->
+                <div class="oferta-home-card secondary-theme">
+                    <div class="oferta-home-img">
+                        <img src="assets/img/bachillerato-referencia.png" alt="Media General Bachillerato Técnico">
+                        <div class="oferta-home-overlay">
+                            <span>Mención Técnica</span>
+                        </div>
+                    </div>
+                    <div class="oferta-home-content">
+                        <h3>Media General</h3>
+                        <p>Bachillerato integral altamente especializado en áreas tecnológicas e industriales,
+                            capacitando al alumno en laboratorios de física, química y computación.</p>
+                        <a href="oferta-academica.html" class="btn-text">Ver Menciones Técnicas <i
+                                class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN: GALERÍA DE VIDA ESCOLAR (DYNAMIC IMAGES) -->
+    <section class="galeria-seccion section-padding reveal fade-bottom">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-pre">Entorno y Actividades</span>
+                <h2 class="section-title">Nuestra Vida <span>Escolar</span></h2>
+                <p class="section-subtitle">Instalaciones de vanguardia y dinámicas formativas que potencian el talento
+                    técnico e intelectual.</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="galeria-grid">
+                <!-- Item 1 -->
+                <div class="galeria-item">
+                    <img src="assets/img/taller-tecnico.jpg" alt="Talleres Industriales LITIN">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Talleres Técnicos</h4>
+                            <p>Prácticas de electrónica, automatización e instrumental técnico.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="galeria-item">
+                    <img src="assets/img/laboratorio-tecnologico.jpg" alt="Plataforma de Informática PLED">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Hardware & Software</h4>
+                            <p>Entornos informáticos avanzados con la plataforma PLED.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="galeria-item">
+                    <img src="assets/img/cultura-actividad.jpg" alt="Actividades Culturales y Artísticas">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Cultura y Extensión</h4>
+                            <p>Música, teatro y eventos que nutren el espíritu humano.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="galeria-item">
+                    <img src="assets/img/planta-fisica-1.jpg" alt="Laboratorio de Ciencias Naturales">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Ciencias Aplicadas</h4>
+                            <p>Estudios interactivos en laboratorios de Física y Química.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="galeria-item">
+                    <img src="assets/img/planta-fisica-2.jpg" alt="Canchas Deportivas del Liceo">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Instalaciones Deportivas</h4>
+                            <p>Cancha múltiple y áreas recreativas para el bienestar físico.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="galeria-item">
+                    <img src="assets/img/estudiantes-primaria.jpg" alt="Primaria y valores escolares">
+                    <div class="galeria-overlay">
+                        <div class="galeria-info">
+                            <h4>Educación de Futuro</h4>
+                            <p>Ambiente seguro e interactivo para la formación integral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECCIÓN: TESTIMONIOS DESTACADOS -->
+    <section class="testimonios-home section-padding light-bg reveal fade-bottom">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-pre">Comunidad Orgullosa</span>
+                <h2 class="section-title">Voces del <span>LITIN</span></h2>
+                <p class="section-subtitle">Alumnos, representantes y docentes testifican la excelencia y la calidad
+                    humana de nuestra institución.</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="testimonios-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonio-home-card border-blue">
+                    <div class="quote-home-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonio-home-text">"Tantos recuerdos y excelentes momentos con todos mis alumnos y
+                        colegas, Dios los siga bendiciendo grandemente para seguir creciendo como la mejor institución
+                        del estado."</p>
+                    <div class="testimonio-home-author">
+                        <div class="avatar-circle">VR</div>
+                        <div class="author-home-info">
+                            <h4>Vicman Rodríguez</h4>
+                            <span>Docente / Colega</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonio-home-card border-red">
+                    <div class="quote-home-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonio-home-text">"Orgulloso de ser Litiniano Sección D 1993-1999. Saludos a todos…
+                        Algún día volveré a caminar por esos pasillos y recordar los laboratorios donde se construyó mi
+                        futuro."</p>
+                    <div class="testimonio-home-author">
+                        <div class="avatar-circle text-red">GR</div>
+                        <div class="author-home-info">
+                            <h4>Greg Romero</h4>
+                            <span>Egresado (Prom. 1999)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonio-home-card border-dark">
+                    <div class="quote-home-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonio-home-text">"Saludos, felicidades y bendiciones para el maravilloso equipo
+                        docente administrativo y mantenimiento del Litin, por estar siempre a la vanguardia educativa y
+                        cuidando a nuestros hijos."</p>
+                    <div class="testimonio-home-author">
+                        <div class="avatar-circle text-dark">LM</div>
+                        <div class="author-home-info">
+                            <h4>Lisbeth Medina</h4>
+                            <span>Representante / Madre</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECCIÓN: LLAMADO A LA ACCIÓN (ADMISIONES) -->
+    <section class="cta-admisiones section-padding reveal fade-bottom">
+        <div class="overlay-cta"></div>
+        <div class="container cta-wrapper">
+            <div class="cta-card-glass">
+                <h2>¿Listo para Construir tu <span>Éxito</span>?</h2>
+                <p>Las pre-inscripciones para el próximo período académico se encuentran abiertas. Da el primer paso
+                    hacia una educación industrial y tecnológica de vanguardia.</p>
+                <div class="cta-buttons">
+                    <a href="admision.html" class="btn-primary"><i class="fas fa-file-signature"></i> Iniciar
+                        Pre-inscripción</a>
+                    <a href="oferta-academica.html" class="btn-secondary"><i class="fas fa-book-open"></i> Ver Oferta
+                        Académica</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER PREMIUM -->
+    <footer class="footer-premium">
+        <div class="container footer-grid">
+            <!-- Columna 1: Info General -->
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-brand">
+                    <img src="assets/img/logo-litin-sinfondo.png" alt="Logo LITIN" class="footer-logo">
+                    <div class="brand-text">
+                        <span class="brand-title">Unidad Educativa</span>
+                        <span class="brand-sub">LITIN</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Más de 32 años formando bachilleres y líderes técnicos con excelencia académica,
+                    disciplina, valores éticos e innovación industrial en Carabobo.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="Youtube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div class="footer-col links-col">
+                <h3>Mapa del Sitio</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                    <li><a href="institucion.html"><i class="fas fa-chevron-right"></i> Nuestra Institución</a></li>
+                    <li><a href="oferta-academica.html"><i class="fas fa-chevron-right"></i> Oferta Académica</a></li>
+                    <li><a href="departamentos.html"><i class="fas fa-chevron-right"></i> Departamentos</a></li>
+                    <li><a href="testimonios.html"><i class="fas fa-chevron-right"></i> Testimonios</a></li>
+                    <li><a href="admision.html"><i class="fas fa-chevron-right"></i> Admisiones</a></li>
+                    <li><a href="https://virtual.litin.edu.ve/moodle30/login/index.php" target="_blank"><i
+                                class="fas fa-graduation-cap"></i> Aula Virtual</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Datos de Contacto -->
+            <div class="footer-col contact-col">
+                <h3>Contáctanos</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Principal de Flor Amarillo, Valencia, Edo. Carabobo, Venezuela.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+58 (241) 834-8848 / 838-8920</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>informacion@litin.edu.ve</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lunes a Viernes: 7:00 AM - 3:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Mapa de Ubicación -->
+            <div class="footer-col map-col">
+                <h3>Ubicación Escolar</h3>
+                <div class="map-container-styled">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3927.7554625299447!2d-67.93043812543085!3d10.118047970954933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8062ddc76f8e71%3A0xc3b838706d863f6a!2sLiceo%20Litin!5e0!3m2!1ses-419!2sve!4v1716654321980!5m2!1ses-419!2sve"
+                        width="100%" height="155" style="border:0; border-radius: 12px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 Liceo de Tecnología Industrial LITIN. Todos los derechos reservados.</p>
+                <p>Comprometidos con la Excelencia Educativa e Industrial.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
