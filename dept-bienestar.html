@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienestar Estudiantil | LITIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="page-banner bienestar-banner-bg">
+        <div class="banner-content">
+            <h1>BIENESTAR ESTUDIANTIL</h1>
+            <p>Apoyo emocional, mental y psicopedagógico para nuestra comunidad litiniana.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container-grid">
+            
+            <div class="institucion-text">
+                <h2 class="title-highlight">
+                    <span>APOYO</span> INTEGRAL
+                </h2>
+                <p class="subtitle-gray" style="margin-top: 20px; font-size: 1.15rem; line-height: 1.8;">
+                    Contamos con un departamento especializado donde nuestros estudiantes acuden en búsqueda de apoyo emocional y mental, asegurando un entorno seguro y óptimo para su crecimiento.
+                </p>
+                
+                <ul class="valores-list" style="margin-top: 30px;">
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Orientación Psicopedagógica</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i> Desarrollo Humano y Empatía</li>
+                </ul>
+            </div>
+
+            <div class="institucion-image">
+                <img src="assets/img/bienestar-estudiantil.png" alt="Estudiantes en apoyo psicopedagógico" class="img-styled">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--light-bg);">
+        <div class="testimonios-header">
+            <span class="top-subtitle">NUESTROS COMPROMISOS</span>
+            <h3 class="main-title" style="margin-top: 10px;">SERVICIOS DE APOYO</h3>
+            <div class="title-line" style="background: var(--accent-color);"></div>
+        </div>
+
+        <div class="dept-grid" style="margin-top: 40px;">
+            
+            <div class="dept-card border-blue">
+                <div class="dept-icon" style="color: var(--primary-color);">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Apoyo Mental</h3>
+                <p>Atención profesional para diagnosticar, guiar y orientar en el contexto educativo y emocional.</p>
+            </div>
+
+            <div class="dept-card border-red">
+                <div class="dept-icon" style="color: var(--accent-color);">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Desarrollo Humano</h3>
+                <p>Programas diseñados para fortalecer los valores esenciales, la resiliencia y la empatía en nuestra comunidad.</p>
+            </div>
+
+            <div class="dept-card border-green">
+                <div class="dept-icon" style="color: #10b981;">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Éxito Académico</h3>
+                <p>Herramientas psicopedagógicas avanzadas para potenciar el aprendizaje y mejorar el rendimiento escolar.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function cargarNavbar() {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('No se pudo cargar el navbar');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        // Ejecutar al cargar el documento
+        document.addEventListener('DOMContentLoaded', cargarNavbar);
+    </script>
+</body>
+</html>
